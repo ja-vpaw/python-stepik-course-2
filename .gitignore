@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# pycharm_settings
+.idea/
+
+# not_my_code
+alien_py/
+
