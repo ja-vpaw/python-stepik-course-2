@@ -20,25 +20,23 @@ class ExtendedStack(list):
             self.append(self.pop() // self.pop())
 
 
-ex_stack = ExtendedStack([1, 2, 3, 4, -3, 3, 5, 10])
-print(ex_stack)
+def test():
+    ex_stack = ExtendedStack([1, 2, 3, 4, -3, 3, 5, 10])
+    ex_stack.div()
+    print(ex_stack)
+    assert ex_stack.pop() == 2
+    ex_stack.sub()
+    print(ex_stack)
+    assert ex_stack.pop() == 6
+    ex_stack.sum()
+    print(ex_stack)
+    assert ex_stack.pop() == 7
+    ex_stack.mul()
+    print(ex_stack)
+    assert ex_stack.pop() == 2
+    print(ex_stack)
+    assert len(ex_stack) == 0
 
-ex_stack.div()
-print(ex_stack)
-assert ex_stack.pop() == 2
-
-ex_stack.sub()
-print(ex_stack)
-assert ex_stack.pop() == 6
-
-ex_stack.sum()
-print(ex_stack)
-assert ex_stack.pop() == 7
-
-ex_stack.mul()
-print(ex_stack)
-assert ex_stack.pop() == 2
-
-print(ex_stack)
-assert len(ex_stack) == 0
+if __name__ == '__main__':
+    test()
 
