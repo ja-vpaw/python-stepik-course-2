@@ -9,3 +9,4 @@ for line in sys.stdin:
     line = line.rstrip()
     if re.fullmatch(pattern, line):
         print(line)
+
